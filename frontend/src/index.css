@@ -1,13 +1,127 @@
+/* VARS */
+
+/* Colors */
+
+:root {
+    --shade: #242448;
+    --shade-2: #414074;
+
+    --tint: #FFFFFF;
+
+    --primary: #53EAFF;
+    --primary-2: #3CDDFF;
+
+    --primary-shadow-color: #33737C99;
+}
+
+/* Dimensions */
+
+:root {
+    --element-height: 48px;
+    --element-height-large: 72px;
+
+    --element-padding: 24px;
+    --element-border-width: 2px;
+
+    --font-size: 16px;
+
+    --ui-padding: 48px;
+
+    --border-radius: 999px;
+}
+
+/* Other */
+
+:root {
+    --fonts: 'Exo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+    --text-shadow-properties: 0 0 32px;
+    --shadow-properties: 0 0 48px;
+    --primary-shadow: var(--shadow-properties) var(--primary-shadow-color);
+    --text-shadow: var(--text-shadow-properties) rgba(0, 0, 0, 1);
+}
+
+
+/* STYLES */
+
+/* General */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    margin: 0;
+    font-family: var(--fonts);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    background: linear-gradient(to top, var(--shade) 40%, var(--shade-2) 100%);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+p, pre, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonts);
+    color: var(--tint);
+    text-transform: uppercase;
+}
+
+svg {
+    fill: var(--tint);
+}
+
+button, input, textarea {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Library */
+
+.ui {
+    width: calc(100vw - var(--ui-padding) * 2);
+    height: calc(100vh - var(--ui-padding) * 2);
+
+    padding: var(--ui-padding);
+}
+
+button.primary {
+    height: var(--element-height);
+    background: linear-gradient(to bottom right, var(--primary), var(--primary-2));
+    padding: 0 var(--element-padding);
+    border-radius: var(--border-radius);
+    box-shadow: var(--primary-shadow);
+    border: var(--element-border-width) solid var(--primary);
+}
+
+button.primary p {
+    font-size: var(--font-size);
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: var(--text-shadow);
+}
+
+
+/* ANIMATIONS */
+
+.scale-anim {
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.scale-anim:hover {
+    transform: scale(0.95);
+    opacity: .9;
+}
+
+.scale-anim:active {
+    transform: scale(0.9);
+    opacity: .8;
 }

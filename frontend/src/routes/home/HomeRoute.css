@@ -1,0 +1,19 @@
+.home {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.home .ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.home .ui .play {
+    margin-bottom: var(--ui-padding);
+}
