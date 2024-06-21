@@ -1,0 +1,39 @@
+.game .ui {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game .ui .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game .ui .top .info > div p {
+    font-size: var(--font-size);
+    font-weight: var(--font-heavy);
+}
+
+.game .ui .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game .ui .bottom .guess {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.game .ui .bottom .guess .mini-map {
+    width: 384px;
+    aspect-ratio: 16/9;
+    background: var(--dark);
+    backdrop-filter: blur(2px);
+    margin-bottom: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-properties) var(--dark-shadow-color-2);
+    cursor: pointer;
+}

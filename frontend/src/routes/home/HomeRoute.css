@@ -11,7 +11,8 @@
     left: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    /*TODO: Final design flex-end would be better*/
+    align-items: center;
 }
 
 .home .ui .play {

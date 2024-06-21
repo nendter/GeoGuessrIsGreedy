@@ -1,0 +1,9 @@
+.icon {
+    width: fit-content;
+    height: fit-content;
+}
+
+.icon svg {
+    width: 100%;
+    height: 100%;
+}
