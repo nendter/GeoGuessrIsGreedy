@@ -34,7 +34,8 @@
 
     --border-radius: 24px;
 
-    --spacing: 16px;
+    --spacing-2: 16px;
+    --spacing: 8px;
 }
 
 /* Other */
@@ -99,6 +100,10 @@ button[disabled] {
 /* Library */
 
 .ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+
     width: calc(100vw - var(--ui-padding) * 2);
     height: calc(100vh - var(--ui-padding) * 2);
 

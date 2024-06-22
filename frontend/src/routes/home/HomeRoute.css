@@ -6,9 +6,6 @@
 }
 
 .home .ui {
-    position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: center;
     /*TODO: Final design flex-end would be better*/
